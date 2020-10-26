@@ -37,3 +37,17 @@ class SimpleBorderFormat : Format("simple-border") {
         """.trimIndent()
     }
 }
+
+class DiscordFormat : Format("discord") {
+    override fun build(text: String): String {
+        val builder = StringBuilder()
+        for (c in text.toCharArray()) {
+            if (c.isLetter()) {
+                builder.append(":regional_indicator_${c.toLowerCase()}: ")
+            } else {
+                builder.append(c)
+            }
+        }
+        return builder.toString()
+    }
+}
