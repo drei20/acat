@@ -18,6 +18,7 @@ fun main(args: Array<String>) {
     formats.add(BigFormat())
     formats.add(SmallFormat())
     formats.add(AltFormat())
+    formats.add(SimpleBorderFormat())
 
     if (args.size == 1) {
         if (args[0] == "-f") {
