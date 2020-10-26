@@ -19,6 +19,7 @@ fun main(args: Array<String>) {
     formats.add(SmallFormat())
     formats.add(AltFormat())
     formats.add(SimpleBorderFormat())
+    formats.add(DiscordFormat())
 
     if (args.size == 1) {
         if (args[0] == "-f") {
