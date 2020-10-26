@@ -27,3 +27,13 @@ class AltFormat : Format("alt") {
         return builder.toString()
     }
 }
+
+class SimpleBorderFormat : Format("simple-border") {
+    override fun build(text: String): String {
+        return """
+            +${"-".repeat(text.length + 2)}+
+            | $text |
+            +${"-".repeat(text.length + 2)}+
+        """.trimIndent()
+    }
+}
