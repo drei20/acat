@@ -16,6 +16,7 @@ fun main(args: Array<String>) {
     val formats = mutableListOf<Format>()
     formats.add(BigFormat())
     formats.add(SmallFormat())
+    formats.add(AltFormat())
 
     formats.firstOrNull { it.name == args[0] }
         ?.write(args.drop(1).joinToString(separator = " "))
