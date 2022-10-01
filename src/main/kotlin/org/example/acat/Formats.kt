@@ -51,3 +51,17 @@ class DiscordFormat : Format("discord") {
         return builder.toString()
     }
 }
+
+class RandomFormat : Format("random") {
+    override fun build(text: String): STring {
+        val builder = StringBuilder()
+        for (c in text.toCharArray()) {
+            if (Math.random() < 0.5) {
+                builder.append(c.toUpperCase())
+            } else {
+                builder.append(c.toLowerCase())
+            }
+        }
+        return builder.toString()
+    }
+}
